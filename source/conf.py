@@ -41,7 +41,7 @@ master_doc = 'index'
 
 # General information about the project.
 project = u'CloudFlare App Documentation'
-copyright = u'2012, John Robers'
+copyright = u'2012, CloudFlare, Inc.'
 
 # The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the
