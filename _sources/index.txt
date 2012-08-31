@@ -1,6 +1,8 @@
 CloudFlare App Marketplace
 ==========================
 
+http://www.cloudflare.com/apps
+
 Features
 ========
 
@@ -16,3 +18,5 @@ Documentation
 
 Other resources
 ===============
+
+Sample app repo: https://github.com/cloudflare/cfapp_sample
