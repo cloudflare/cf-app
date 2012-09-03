@@ -228,7 +228,7 @@ man_pages = [
 #  dir menu entry, description, category)
 texinfo_documents = [
   ('index', 'CloudFlareAppDocumentation', u'CloudFlare App Documentation Documentation',
-   u'John Robers', 'CloudFlareAppDocumentation', 'One line description of project.',
+   u'John Roberts', 'CloudFlareAppDocumentation', 'One line description of project.',
    'Miscellaneous'),
 ]
 
