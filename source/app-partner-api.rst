@@ -5,9 +5,10 @@ The CloudFlare App Partner API currently consists of two endpoints: Accounts and
 
 Accounts are the relationships between a CloudFlare user and your service, and Domains belong to Accounts, and reference which web domains have been enabled by a user.
 
-The account API endpoint is configured in your cloudflare.json like this:
+Account API endpoint
+--------------------
 
-::
+The account API endpoint is configured in your cloudflare.json like this::
 
 	{
 		"account": {
@@ -44,6 +45,9 @@ The account API endpoint is configured in your cloudflare.json like this:
 		}
 	}
 
+Account creation
+----------------
+
 When a user wants to create an account, we will send you a POST request like this to your callback_url/accounts::
 
 	{
@@ -76,6 +80,9 @@ Once you process a pending account you should send a PUT request to https://clou
 
 The login should be valid for at least an hour.
 
+Adding a domain
+---------------
+
 Once we have an approved account, a user can add a domain. When this happens we will make a POST to callback_url/domains::
 
 	{
@@ -98,7 +105,7 @@ If you respond with a JSON object like this::
 
 then we will allow the app to be activated on that domain.
 
-::
+A response like this will not allow the app to be activated on that domain::
 
 	{
 		“status”: “invalid”,
@@ -141,6 +148,9 @@ You should respond to GET requests to your callback_url/domains/domain_id with t
 	}
 
 When a user disables your app on a domain, we will send a DELETE request to callback_url/domains/domain_id.
+
+Billing
+-------
 
 If you have a billing section in your config, we will send POST request to a /subscriptions endpoint that look like this::
 

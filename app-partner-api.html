@@ -51,6 +51,8 @@
 <h1>CloudFlare App Partner API<a class="headerlink" href="#cloudflare-app-partner-api" title="Permalink to this headline">¶</a></h1>
 <p>The CloudFlare App Partner API currently consists of two endpoints: Accounts and Domains.</p>
 <p>Accounts are the relationships between a CloudFlare user and your service, and Domains belong to Accounts, and reference which web domains have been enabled by a user.</p>
+<div class="section" id="account-api-endpoint">
+<h2>Account API endpoint<a class="headerlink" href="#account-api-endpoint" title="Permalink to this headline">¶</a></h2>
 <p>The account API endpoint is configured in your cloudflare.json like this:</p>
 <div class="highlight-python"><pre>{
         "account": {
@@ -87,6 +89,9 @@ config: {
         }
 }</pre>
 </div>
+</div>
+<div class="section" id="account-creation">
+<h2>Account creation<a class="headerlink" href="#account-creation" title="Permalink to this headline">¶</a></h2>
 <p>When a user wants to create an account, we will send you a POST request like this to your callback_url/accounts:</p>
 <div class="highlight-python"><pre>{
         “account_id”: 100937,
@@ -114,6 +119,9 @@ config: {
 }</pre>
 </div>
 <p>The login should be valid for at least an hour.</p>
+</div>
+<div class="section" id="adding-a-domain">
+<h2>Adding a domain<a class="headerlink" href="#adding-a-domain" title="Permalink to this headline">¶</a></h2>
 <p>Once we have an approved account, a user can add a domain. When this happens we will make a POST to callback_url/domains:</p>
 <div class="highlight-python"><pre>{
         “account_id”: 100937,
@@ -132,6 +140,7 @@ config: {
 }</pre>
 </div>
 <p>then we will allow the app to be activated on that domain.</p>
+<p>A response like this will not allow the app to be activated on that domain:</p>
 <div class="highlight-python"><pre>{
         “status”: “invalid”,
         "domain_id": "103778",
@@ -167,6 +176,9 @@ config: {
 }</pre>
 </div>
 <p>When a user disables your app on a domain, we will send a DELETE request to callback_url/domains/domain_id.</p>
+</div>
+<div class="section" id="billing">
+<h2>Billing<a class="headerlink" href="#billing" title="Permalink to this headline">¶</a></h2>
 <p>If you have a billing section in your config, we will send POST request to a /subscriptions endpoint that look like this:</p>
 <div class="highlight-python"><pre>{
         “sub_plan”: “Chowder”,
@@ -180,6 +192,7 @@ config: {
 }</pre>
 </div>
 </div>
+</div>
 
 
           </div>
@@ -187,6 +200,17 @@ config: {
       </div>
       <div class="sphinxsidebar">
         <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">CloudFlare App Partner API</a><ul>
+<li><a class="reference internal" href="#account-api-endpoint">Account API endpoint</a></li>
+<li><a class="reference internal" href="#account-creation">Account creation</a></li>
+<li><a class="reference internal" href="#adding-a-domain">Adding a domain</a></li>
+<li><a class="reference internal" href="#billing">Billing</a></li>
+</ul>
+</li>
+</ul>
+
   <h4>Previous topic</h4>
   <p class="topless"><a href="development-process.html"
                         title="previous chapter">Development Process</a></p>

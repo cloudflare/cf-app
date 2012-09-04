@@ -2,7 +2,7 @@ Development Process
 ===================
 
 Prerequisites
-=============
+-------------
 
 There are very few prerequisites for developing a CloudFlare App. You will need:
 
@@ -12,7 +12,7 @@ There are very few prerequisites for developing a CloudFlare App. You will need:
 * An app idea, whether integrating an existing web service or creating a new service without dependencies
 
 Ready?
-======
+------
 
 Ready to start? Here's the steps:
 
@@ -21,7 +21,7 @@ Ready to start? Here's the steps:
 * Upon approval, the app's status will be shown in your development dashboard.
 
 Status of an App
-================
+----------------
 
 An app goes through each of the following stages, often in rapid succession. CloudFlare's goal is to respond to all developer inquiries in one business day or less. Complicated reviews, especially first-time reviews, may require more time, but the developer can expect notification within one business day.
 
@@ -70,7 +70,7 @@ To maintain security, CloudFlare reviews apps for vulnerabilities and malware of
 To maintain performance, CloudFlare offers the resources of its global network to app developers at no charge.
 
 Exclusivity
-===========
+-----------
 
 The CloudFlare Apps marketplace is not exclusive in any category.
 
