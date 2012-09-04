@@ -8,7 +8,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>&lt;no title&gt; &mdash; CloudFlare Apps documentation 1.0 documentation</title>
+    <title>Development Process &mdash; CloudFlare Apps documentation 1.0 documentation</title>
     
     <link rel="stylesheet" href="_static/default.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
@@ -47,34 +47,86 @@
         <div class="bodywrapper">
           <div class="body">
             
-  <p>Steps:
-Create a repo.
-Signup /app-signup.html
-CloudFlare &#8211;&gt; approve or reject the app idea (and AppKey)
-CloudFlare stage
-CloudFlare review
-CloudFlare approve
-CloudFlare promote (versions)</p>
-<p>Diagram for process
-Prerequisites</p>
-<p>Domain on CloudFlare to test with</p>
-<p>Testing with a credit card. (future = CF has a test CC?)</p>
-<p>(future = test account, to at least view the existing install process, but has to be locked down for credit card, etc.)</p>
-<p>QUESTION
-How long does it take to review and approve an app?
-ANSWER
-First time.
-Subsequent updates. (diffs accelerate the review)</p>
-<p>App detail pages are optimized for 708 pixels wide.</p>
-<p>To change an image on app detail page (or logo) in the markdown, must change filename to break the &#8220;cache&#8221;.</p>
+  <div class="section" id="development-process">
+<h1>Development Process<a class="headerlink" href="#development-process" title="Permalink to this headline">¶</a></h1>
+</div>
+<div class="section" id="prerequisites">
+<h1>Prerequisites<a class="headerlink" href="#prerequisites" title="Permalink to this headline">¶</a></h1>
+<p>There are very few prerequisites for developing a CloudFlare App. You will need:</p>
 <ul class="simple">
-<li>need a domain to test with</li>
-<li>discovery</li>
-<li>marketing (email, blog, twitter, fb, dashboard)</li>
-<li>review process</li>
-<li>turnaround/timing</li>
-<li>feedback loop</li>
+<li>A free account on CloudFlare.com</li>
+<li>A domain on CloudFlare for testing your app. Any CloudFlare plan, including free, is fine.</li>
+<li>A git repo, whether on GitHub.com or elsewhere, with at least the minimum elements from the <cite>sample app &lt;https://github.com/cloudflare/cfapp_sample&gt;</cite>.</li>
+<li>An app idea, whether integrating an existing web service or creating a new service without dependencies</li>
 </ul>
+</div>
+<div class="section" id="ready">
+<h1>Ready?<a class="headerlink" href="#ready" title="Permalink to this headline">¶</a></h1>
+<p>Ready to start? Here&#8217;s the steps:</p>
+<ul class="simple">
+<li>Submit your app idea, with a git repo link. <a class="reference external" href="https://www.cloudflare.com/app-signup.html">https://www.cloudflare.com/app-signup.html</a></li>
+<li>CloudFlare Apps team will review your app submission. On approval of the initial submission, your application&#8217;s AppKey will be confirmed and CloudFlare Apps team will follow up with you, via email to start.</li>
+<li>Upon approval, the app&#8217;s status will be shown in your development dashboard.</li>
+</ul>
+</div>
+<div class="section" id="status-of-an-app">
+<h1>Status of an App<a class="headerlink" href="#status-of-an-app" title="Permalink to this headline">¶</a></h1>
+<p>An app goes through each of the following stages, often in rapid succession. CloudFlare&#8217;s goal is to respond to all developer inquiries in one business day or less. Complicated reviews, especially first-time reviews, may require more time, but the developer can expect notification within one business day.</p>
+<ul class="simple">
+<li>Submission</li>
+<li>Stage</li>
+<li>Review</li>
+<li>Approve</li>
+<li>Promote</li>
+<li>Published</li>
+</ul>
+<dl class="docutils">
+<dt>Submission</dt>
+<dd>App has been submitted for review to CloudFlare by developer. When CloudFlare assigns an <a href="#id1"><span class="problematic" id="id2">AppKey_</span></a> the app is proceeding. After the initial submission, new versions are submitted via a Pull request in the CloudFlare dashboard.</dd>
+<dt>Stage</dt>
+<dd>New pull request from App developer has been acknowledged by CloudFlare, and the new repo is staged on CloudFlare internal systems, awaiting review. (TK - what new versions look like</dd>
+<dt>Review</dt>
+<dd>CloudFlare is reviewing the app version. If a new version is submitted while an existing version is in review, the new version will be evaluated separately/later. If a new version is staged <em>before</em> review, the earlier version will be ignored.</dd>
+<dt>Approve</dt>
+<dd>CloudFlare has approved the update. If this update is the first version of the app, the app will now be available on the CloudFlare network, and ready for private beta testing. However, the app is not publicly available until it&#8217;s been Published.</dd>
+</dl>
+</div>
+<div class="section" id="review-process">
+<h1>Review Process<a class="headerlink" href="#review-process" title="Permalink to this headline">¶</a></h1>
+<p>The goal of CloudFlare Apps is to have useful services of all kinds instantly and easily available to CloudFlare customers on CloudFlare-powered websites.</p>
+<p>Apps cannot compromise on the core CloudFlare benefits of website speed and security, and making things easy.</p>
+<p>New apps are reviewed with the following concerns:</p>
+<ul class="simple">
+<li>Are there any security considerations?</li>
+<li>Are there any performance considerations?</li>
+<li>Are the services described accurately?</li>
+<li>Is the &#8220;install&#8221; experience smooth?</li>
+<li>Does turning off the app work smoothly?</li>
+</ul>
+<p>To maintain security, CloudFlare reviews apps for vulnerabilities and malware of all sorts.</p>
+<p>To maintain performance, CloudFlare offers the resources of its global network to app developers at no charge.</p>
+</div>
+<div class="section" id="exclusivity">
+<h1>Exclusivity<a class="headerlink" href="#exclusivity" title="Permalink to this headline">¶</a></h1>
+<p>The CloudFlare Apps marketplace is not exclusive in any category.</p>
+</div>
+<div class="section" id="conflicts">
+<h1>Conflicts<a class="headerlink" href="#conflicts" title="Permalink to this headline">¶</a></h1>
+<p>CloudFlare makes efforts to notify customers if technical concerns limit the use of separate apps at the same time. For example, two different link re-writing services could interact erratically,  confusing the customer and the customer&#8217;s website visitors.</p>
+</div>
+<div class="section" id="contract">
+<h1>Contract<a class="headerlink" href="#contract" title="Permalink to this headline">¶</a></h1>
+<p>If an app involves billing of or payments to a site owner (CloudFlare customer), the developer must sign CloudFlare&#8217;s standard application contract before the app is published and generally available to all customers.</p>
+</div>
+<div class="section" id="billing-and-payments">
+<h1>Billing and Payments<a class="headerlink" href="#billing-and-payments" title="Permalink to this headline">¶</a></h1>
+<p>For services where the CloudFlare customer pays, CloudFlare does the billing, and pays the developer 70% on a monthly basis, via ACH or other means if appropriate. CloudFlare supports freemium models; upgrade links, though, must return to CloudFlare for billing.</p>
+<p>For services which earn the CloudFlare customer money, such as advertising or affiliate networks, the developer will pay CloudFlare monthly via ACH, and CloudFlare will pay the CloudFlare customer the customer&#8217;s share. After the customer is paid (usually the majority), CloudFlare and the developer will split the remainder.</p>
+</div>
+<div class="section" id="license">
+<h1>License<a class="headerlink" href="#license" title="Permalink to this headline">¶</a></h1>
+<p>The developer may choose to apply a license to his or her app, as long as the license choice doesn&#8217;t limit use on the CloudFlare network.</p>
+</div>
 
 
           </div>
@@ -82,6 +134,20 @@ Subsequent updates. (diffs accelerate the review)</p>
       </div>
       <div class="sphinxsidebar">
         <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Development Process</a></li>
+<li><a class="reference internal" href="#prerequisites">Prerequisites</a></li>
+<li><a class="reference internal" href="#ready">Ready?</a></li>
+<li><a class="reference internal" href="#status-of-an-app">Status of an App</a></li>
+<li><a class="reference internal" href="#review-process">Review Process</a></li>
+<li><a class="reference internal" href="#exclusivity">Exclusivity</a></li>
+<li><a class="reference internal" href="#conflicts">Conflicts</a></li>
+<li><a class="reference internal" href="#contract">Contract</a></li>
+<li><a class="reference internal" href="#billing-and-payments">Billing and Payments</a></li>
+<li><a class="reference internal" href="#license">License</a></li>
+</ul>
+
   <h4>Previous topic</h4>
   <p class="topless"><a href="gettingstarted.html"
                         title="previous chapter">Getting started</a></p>

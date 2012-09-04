@@ -2,27 +2,6 @@
 Getting started
 ===============
 
-CloudFlare has two goals with the Apps marketplace.
-
-1. Make CloudFlare customers happier.
-2. When CloudFlare helps a developer make money, CloudFlare earns a
-   share.
-
-CloudFlare wants to continue to make WebOps for its customers – website
-owners, all – easier and better. Apps that extend services to a site
-owner and the site’s visitors may save time, make money or simply bring
-a smile to a visitor’s face. CloudFlare’s core benefits are security and
-performance, and we use that platform to enable the broad diversity of
-the web.
-
-For Apps that charge the site owner, CloudFlare does billing and
-distribution and sends on 70% monthly to the app developer. CloudFlare
-supports freemium models; upgrade links, though, must return to
-CloudFlare for billing. For Apps that make their money in other ways,
-such as advertising or data analytics, CloudFlare expects the site owner
-to benefit first, and then CloudFlare splits the remainder with the app
-developer.
-
 What is CloudFlare?
 -------------------
 
@@ -37,11 +16,24 @@ CloudFlare numbers
 
 CloudFlare launched its public service in September, 2010.
 
-As of May, 2012, CloudFlare… \* powers more than 350,000 websites \*
-delivers more than 1,500,000,000 pageviews daily \* sees visits from
-more than 470,000,000 unique users monthly
+As of September, 2012, CloudFlare:
 
-(add data about geo distribution of visitors)
+* powers more than 350,000 websites
+* delivers more than 2,000,000,000 pageviews daily
+* sees visits from more than 550,000,000 unique users monthly
+
+CloudFlare's customers and their visitors are globally distributed. Here's the top 10 countries, by pageviews, from late summer 2012:
+
+1. United States
+2. China
+3. Thailand
+4. Turkey
+5. Brazil
+6. Czech Republic
+7. Great Britain
+8. Mexico
+9. Canada
+10. Egypt
 
 With CloudFlare Apps, you can make your service instantly available to
 this audience.
@@ -49,19 +41,21 @@ this audience.
 What are CloudFlare Apps?
 -------------------------
 
-CloudFlare Apps are services useful to website owners, integrated with a
-simple dashboard choice on any CloudFlare-powered website.
+CloudFlare Apps are services useful to website owners, integrated with a simple dashboard choice on any CloudFlare-powered website.
 
-Two criteria to be a CloudFlare App: 1. Make a website owner’s life
-better. 2. Take advantage of CloudFlare’s platform.
+Two criteria to be a CloudFlare App:
 
-Better is deliberately open-ended. Saving time? Great! Making money?
-Fantastic! Having fun? Definitely!
+1. Make a website owner’s life better.
+2. Take advantage of CloudFlare’s platform.
 
-CloudFlare’s platform is fantastic for many web services and utilities.
-CloudFlare Apps is not simply to promote outside services; they must be
-integrated. CloudFlare isn’t promoting services that are not integrated
-as apps.
+CloudFlare’s platform is fantastic for many web services and utilities. CloudFlare Apps is not simply to promote outside services; they must be integrated. CloudFlare isn’t promoting services that are not integrated as apps.
+
+Goals of CloudFlare Apps
+------------------------
+
+The primary goal of CloudFlare Apps is to make CloudFlare customers happier, by making their websites even better through easy integration of outside services.
+
+Apps may save time, make money or simply bring a smile to a visitor’s face.
 
 Current CloudFlare Apps
 -----------------------
@@ -70,13 +64,16 @@ Several dozen Apps have been developed in close coordination between
 CloudFlare developers and outside developers. More recently,
 CloudFlare’s platform has evolved to free developers to work on their
 own schedule. These apps all take advantage of the latest iteration of
-the platform: \* Trumpet \* EarthHour \* Instaflare \* Visitor
-DNSChanger Detector \* A Better Browser
+the platform:
+
+* Trumpet
+* EarthHour
+* Instaflare
+* Visitor DNSChanger Detector
+* A Better Browser
 
 What can CloudFlare Apps do?
 ----------------------------
-
-Many things… see below.
 
 Distribution
 ~~~~~~~~~~~~
@@ -88,13 +85,7 @@ Development via git
 ~~~~~~~~~~~~~~~~~~~
 
 Use git (public or private repos) to craft and test your App, and make
-updates.
-
-Versioning supported
-
-Private and public beta testing supported.
-
-(CloudFlare retains
+updates. Versioning supported. Private and public beta testing supported.
 
 Account creation
 ~~~~~~~~~~~~~~~~
@@ -105,77 +96,63 @@ automatically, via API.
 Developer has a relationship with the site owner, even if site owner
 leaves CloudFlare.
 
-Default info (list) + any service specific info can be requested.
+Default information and app-specific info can be requested or required.
 
 JavaScript deployment
 ~~~~~~~~~~~~~~~~~~~~~
 
-CloudFlareJS - performant loader removes fear of larding a website with
-too many services
+For those apps which integrate JavaScript on to a customer's page, CloudFlare Apps is remarkable. The #1 support problem of most services which need JavaScript deployment is getting the code on the page in the right place – even **after** the customer has paid for the service. CloudFlare does that instantly, in seconds.
 
-Served from global CDN at no charge (no hosting fees)
+CloudFlareJS, the CloudFlare performant loader, allows site owners to install multiple apps without fear of slowing their sites.
 
-(#1 support problem of most services which need JS deployment is getting
-the code on the page in the right place – even **after** the customer
-has paid for the service.)
+Scripts, images, and CSS (if needed) are served from global CDN at no charge.
 
 Global delivery
 ~~~~~~~~~~~~~~~
 
 CloudFlare will host and deliver App assets (JavaScript, images, CSS,
-and (more?)) from its global CDN at no charge to App developers.
+and more) from its global network at no charge to App developers. Current network map: http://www.cloudflare.com/network-map
 
 DNS manipulation
 ~~~~~~~~~~~~~~~~
 
-CNAME creation, primarily. Other DNS record types possible.
-
-Exception: hosting partners/CNAME customers (~20%)
+*More soon here* CNAME creation, primarily. Other DNS record types possible. Exception: hosting partners/CNAME customers.
 
 Billing
 ~~~~~~~
 
-(coming soon)
+CloudFlare provides a billing platform and simply adds App charges to a customer’s existing account.
 
-CloudFlare provides a billing platform and simply adds App charges to a
-customer’s existing account.
-
-Options include: \* Monthly (pro-rated) charges \* One-time purchases
+Options include:
+* Monthly (pro-rated) charges
+* One-time purchases
 
 Roadmap
 -------
 
--  Other assets
--  Account creation - capabilities of custom apps
+-  CSS delivery via CloudFlare global network
 -  DNS record creation - capabilities of custom apps
--  Billing - capabilities of custom apps
 -  Placement - Ability to specify individual DNS records (subdomains,
    for example), directories or even individual pages for App
-   deployment. Current: Apps are deployed site-wide, with exclusion
-   possible via Page Rules. (NEW TO ALL APPS)
+   deployment. Currently, Apps are deployed site-wide, with exclusion
+   possible via Page Rules.
+-  Sandbox - Controlled domain and account where developers may view live apps and test their own apps beyond their own domain.
+-  Credit card numbers for testing billing end-to-end
+-  cloudflare.json linter
+
 
 Promotion
 ---------
 
-Need examples and screenshots.
+CloudFlare promotes Apps in multiple places at multiple times.
 
--  CloudFlare.com/apps
--  App detail page
--  Dashboard
--  Apps page
--  CloudFlare blog
--  CloudFlare Twitter (x2)
--  CloudFlare Facebook (G+, too, I suppose)
--  Discovery and promotion (SOON) including during CF setup
--  Email (SOON) part of weekly stats email once we start that
-
-Steps to develop
-----------------
-
-(not nearly done)
-
--  Review the sample app on GitHub
--  Apply to be an app developer (link)
--  Use CloudFlareJS sandbox and documentation http://js.cloudflare.com
--  Run cloudflare.json linter (coming soon)
--  …
+-  Apps marketplace <https://www.cloudflare.com/apps>
+-  App detail page <https:/www.cloudflare.com/apps/
+-  Dashboard, My Websites - the "home page" for CloudFlare customers
+-  Dashboard, Apps page - settings and promotion for apps inside dashboard
+-  CloudFlare blog - every app gets a launch blog post, at least
+-  CloudFlare Twitter - @CloudFlare and @CloudFlareApps - from launch and beyond
+-  CloudFlare Facebook - http://www.facebook.com/CloudFlare
+-  CloudFlare on Google+ - https://plus.google.com/100611700350554803650/
+-  Promotion - During CloudFlare setup and within the dashboard
+-  Email - Customer setup emails, regular stats emails (*soon*), and newsletters.

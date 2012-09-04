@@ -20,5 +20,5 @@ Documentation
 Other resources
 ===============
 
-Sample app repo: https://github.com/cloudflare/cfapp_sample
-CloudFlareJS documentation and sandbox: `js.cloudflare.com<http://js.cloudflare.com>`_
+* Sample app repo: https://github.com/cloudflare/cfapp_sample
+* CloudFlareJS documentation and sandbox: `js.cloudflare.com <http://js.cloudflare.com>`_
