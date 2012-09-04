@@ -81,12 +81,6 @@ Distribution
 Reach website owners who care about making their website better. (see
 numbers)
 
-Development via git
-~~~~~~~~~~~~~~~~~~~
-
-Use git (public or private repos) to craft and test your App, and make
-updates. Versioning supported. Private and public beta testing supported.
-
 Account creation
 ~~~~~~~~~~~~~~~~
 
@@ -107,6 +101,16 @@ CloudFlareJS, the CloudFlare performant loader, allows site owners to install mu
 
 Scripts, images, and CSS (if needed) are served from global CDN at no charge.
 
+Billing
+~~~~~~~
+
+CloudFlare provides a billing platform and simply adds App charges to a customer’s existing account.
+
+Options include:
+
+-  Monthly (pro-rated) charges
+-  One-time purchases
+
 Global delivery
 ~~~~~~~~~~~~~~~
 
@@ -118,14 +122,11 @@ DNS manipulation
 
 *More soon here* CNAME creation, primarily. Other DNS record types possible. Exception: hosting partners/CNAME customers.
 
-Billing
-~~~~~~~
+Development via git
+~~~~~~~~~~~~~~~~~~~
 
-CloudFlare provides a billing platform and simply adds App charges to a customer’s existing account.
-
-Options include:
-* Monthly (pro-rated) charges
-* One-time purchases
+Use git (public or private repos) to craft and test your App, and make
+updates. Versioning supported. Private and public beta testing supported.
 
 Roadmap
 -------
@@ -147,10 +148,10 @@ Promotion
 CloudFlare promotes Apps in multiple places at multiple times.
 
 -  Apps marketplace <https://www.cloudflare.com/apps>
--  App detail page <https:/www.cloudflare.com/apps/
--  Dashboard, My Websites - the "home page" for CloudFlare customers
--  Dashboard, Apps page - settings and promotion for apps inside dashboard
--  CloudFlare blog - every app gets a launch blog post, at least
+-  App detail page <https:/www.cloudflare.com/apps/trumpet> (example)
+-  Dashboard, My Websites - the "home page" for CloudFlare customers <https://www.cloudflare.com/my-websites.html> (*must be logged in*)
+-  Dashboard, Apps page - settings and promotion for apps inside dashboard <https://www.cloudflare.com/cloudflare-apps.html> (*must be logged in*)
+-  CloudFlare blog - <http://blog.cloudflare.com/> every app gets a launch blog post, at least
 -  CloudFlare Twitter - @CloudFlare and @CloudFlareApps - from launch and beyond
 -  CloudFlare Facebook - http://www.facebook.com/CloudFlare
 -  CloudFlare on Google+ - https://plus.google.com/100611700350554803650/

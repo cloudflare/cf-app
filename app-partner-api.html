@@ -1,0 +1,232 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>CloudFlare App Partner API &mdash; CloudFlare Apps documentation 1.0 documentation</title>
+    
+    <link rel="stylesheet" href="_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '',
+        VERSION:     '1.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="top" title="CloudFlare Apps documentation 1.0 documentation" href="index.html" />
+    <link rel="prev" title="Development Process" href="development-process.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="development-process.html" title="Development Process"
+             accesskey="P">previous</a> |</li>
+        <li><a href="index.html">CloudFlare Apps documentation 1.0 documentation</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="cloudflare-app-partner-api">
+<h1>CloudFlare App Partner API<a class="headerlink" href="#cloudflare-app-partner-api" title="Permalink to this headline">¶</a></h1>
+<p>The CloudFlare App Partner API currently consists of two endpoints: Accounts and Domains.</p>
+<p>Accounts are the relationships between a CloudFlare user and your service, and Domains belong to Accounts, and reference which web domains have been enabled by a user.</p>
+<p>The account API endpoint is configured in your cloudflare.json like this:</p>
+<div class="highlight-python"><pre>{
+        "account": {
+        "callback_url": "https://mysite.com/api",
+        “user_fields”: [“email”]
+},
+"billing": {
+        "type": "zone",
+        "plans":[
+                {
+                        "name" : "Chowder",
+                        "price": "3.20"
+                },
+                {
+                        "name" : "Minestrone",
+                        "price" : "6.55"
+                }
+        ]
+},
+config: {
+"interface": [
+                {
+                                "type": "string",
+                                "name": "food",
+                                "description": "Please tell us your favorite food.",
+                "domain_request": true
+                },
+{
+                                "type": "string",
+                                "name": "color",
+                                "description": "Please tell us your favorite color."
+                }
+        ]
+        }
+}</pre>
+</div>
+<p>When a user wants to create an account, we will send you a POST request like this to your callback_url/accounts:</p>
+<div class="highlight-python"><pre>{
+        “account_id”: 100937,
+        “email”: “email@example.com”
+}</pre>
+</div>
+<p>You should respond like this:</p>
+<div class="highlight-python"><pre>{
+        “account_id”: 100937,
+                        “status”: “approve”
+        “login”: {
+                “url”: “https://mysite.com/login?token=TOKEN”,
+                “expires”: “timestamp”
+}
+}</pre>
+</div>
+<p>You can also use status “pending” if you don’t want to approve it on the spot.</p>
+<p>Once you process a pending account you should send a PUT request to <a class="reference external" href="https://cloudflare.com/api/v3.0beta/app_accounts/account_id">https://cloudflare.com/api/v3.0beta/app_accounts/account_id</a> with:</p>
+<div class="highlight-python"><pre>{
+        “account_id”: 100937,
+        “login”: {
+                “url”: “https://mysite.com/login?token=TOKEN”,
+                “expires”: “timestamp”
+}
+}</pre>
+</div>
+<p>The login should be valid for at least an hour.</p>
+<p>Once we have an approved account, a user can add a domain. When this happens we will make a POST to callback_url/domains:</p>
+<div class="highlight-python"><pre>{
+        “account_id”: 100937,
+        “domain_name”: “siteysite.com”,
+        “domain_id”: 103778,
+        “domain_options”: {
+                “food”: “mousse”
+}
+}</pre>
+</div>
+<p>Food is there, but color is not, because food has the domain_request flag set in the cloudflare.json.</p>
+<p>If you respond with a JSON object like this:</p>
+<div class="highlight-python"><pre>{
+        “status”: “approved”,
+        "domain_id": "103778"
+}</pre>
+</div>
+<p>then we will allow the app to be activated on that domain.</p>
+<div class="highlight-python"><pre>{
+        “status”: “invalid”,
+        "domain_id": "103778",
+        “message”: “account has been banned”
+}</pre>
+</div>
+<p>To process the request offline and respond later:</p>
+<div class="highlight-python"><pre>{
+        “status”: “pending”,
+        "domain_id": "103778"
+}</pre>
+</div>
+<p>When you are ready to approve or reject a pending account request, send a PUT request to <a class="reference external" href="https://cloudflare.com/api/v3.0beta/app_domains/domain_id">https://cloudflare.com/api/v3.0beta/app_domains/domain_id</a></p>
+<div class="highlight-python"><div class="highlight"><pre><span class="p">{</span>
+        <span class="s">&quot;action&quot;</span><span class="p">:</span> <span class="s">&quot;approve&quot;</span><span class="p">,</span>
+        <span class="s">&quot;notes&quot;</span><span class="p">:</span> <span class="s">&quot;Sweet!&quot;</span><span class="p">,</span>
+        <span class="s">&quot;domain_id&quot;</span><span class="p">:</span> <span class="s">&quot;103778&quot;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>or:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="p">{</span>
+        <span class="s">&quot;domain_id&quot;</span><span class="p">:</span> <span class="s">&quot;103778&quot;</span><span class="p">,</span>
+        <span class="s">&quot;action&quot;</span><span class="p">:</span> <span class="s">&quot;reject&quot;</span><span class="p">,</span>
+        <span class="s">&quot;notes&quot;</span><span class="p">:</span> <span class="s">&quot;Sorry, we cannot accept raw-egg-based submissions at this time&quot;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>You should respond to GET requests to your callback_url/domains/domain_id with the current status of a domain request.</p>
+<div class="highlight-python"><pre>{
+        “status”: “pending”,
+        "domain_id": "103778"
+}</pre>
+</div>
+<p>When a user disables your app on a domain, we will send a DELETE request to callback_url/domains/domain_id.</p>
+<p>If you have a billing section in your config, we will send POST request to a /subscriptions endpoint that look like this:</p>
+<div class="highlight-python"><pre>{
+        “sub_plan”: “Chowder”,
+        "domain_id": "103778"
+}</pre>
+</div>
+<p>When a user cancels it will look like this:</p>
+<div class="highlight-python"><pre>{
+        “sub_plan”: “”,
+        "domain_id": "103778"
+}</pre>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="development-process.html"
+                        title="previous chapter">Development Process</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="_sources/app-partner-api.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="development-process.html" title="Development Process"
+             >previous</a> |</li>
+        <li><a href="index.html">CloudFlare Apps documentation 1.0 documentation</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2012, CloudFlare, Inc..
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.1.3.
+    </div>
+  </body>
+</html>
