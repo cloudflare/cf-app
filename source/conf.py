@@ -213,8 +213,8 @@ latex_documents = [
 # One entry per manual page. List of tuples
 # (source start file, name, description, authors, manual section).
 man_pages = [
-    ('index', 'cloudflareappdocumentation', u'CloudFlare App Documentation Documentation',
-     [u'John Robers'], 1)
+    ('index', 'cloudflareappdocumentation', u'CloudFlare App Documentation',
+     [u'John Roberts'], 1)
 ]
 
 # If true, show URL addresses after external links.
