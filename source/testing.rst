@@ -3,7 +3,7 @@ Testing CloudFlare Apps
 
 Before launch
 -------------
-Once an app submission has been accepted, a developer can start testing their app in production as soon as a version has been reviewed and promoted to the live network (see development-process for more).
+Once an app submission has been accepted, a developer can start testing their app in production as soon as a version has been reviewed and promoted to the live network (see `development process` development-process.html`_ for more).
 
 The app detail page and the CloudFlare dashboard controls will be presented behind authentication, and the dashboard controls will only be visible with parameters added to the dashboard URL (more details coming soon).
 

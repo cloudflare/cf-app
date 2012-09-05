@@ -31,5 +31,5 @@ Future Enhancements
 -------------------
 
 * Free trial option
-* One-time charge (custom example: `Zoompf Performance Report <https://www.cloudflare.com/apps/zoompf_report>`
+* One-time charge (custom example: `Zoompf Performance Report <https://www.cloudflare.com/apps/zoompf_report>`_)
 * Online reporting

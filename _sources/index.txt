@@ -1,7 +1,9 @@
 CloudFlare Apps
 ===============
 
-CloudFlare provides security and performance to websites of all sizes. CloudFlare Apps gives developers a way to distribute web apps to these hundreds of thousands of customers. Current examples: https://www.cloudflare.com/apps
+CloudFlare provides security and performance to websites of all sizes.
+
+`CloudFlare Apps <https://www.cloudflare.com/apps>`_ gives developers a way to distribute web apps to hundreds of thousands of CloudFlare customers.
 
 This site explains how to develop a CloudFlare App.
 
@@ -21,7 +23,7 @@ Documentation
 Other development resources
 ===========================
 
-* Sample app repo: https://github.com/cloudflare/cfapp_sample
+* `Sample app repo <https://github.com/cloudflare/cfapp_sample>`_
 * CloudFlareJS documentation and sandbox: `js.cloudflare.com <http://js.cloudflare.com>`_
 
 Developer Support

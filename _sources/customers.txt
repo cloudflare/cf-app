@@ -15,7 +15,7 @@ CloudFlare aims to make complicated infrastructure easy to understand and use. W
 
 While English is often understood by CloudFlare customers, it's not the first language for all customers. Developers must note languages supported in their app interfaces.
 
-CloudFlare's English-language site is our most popular, but we are  expanding our translation efforts to ease signup and operation in other languages. Developers don't need to take any special steps at this time, but we welcome contributions via `CloudFlare's translation portal <http://translate.cloudflare.com>`, operated by app partner `Smartling <https://www.cloudflare.com/apps/smartling>`.
+CloudFlare's English-language site is our most popular, but we are  expanding our translation efforts to ease signup and operation in other languages. Developers don't need to take any special steps at this time, but we welcome contributions via `CloudFlare's translation portal <http://translate.cloudflare.com>`_, operated by app partner `Smartling <https://www.cloudflare.com/apps/smartling>`_.
 
 DNS
 ---

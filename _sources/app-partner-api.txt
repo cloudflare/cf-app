@@ -8,7 +8,7 @@ Accounts are the relationships between a CloudFlare user and your service, and D
 Account API endpoint
 --------------------
 
-The account API endpoint is configured in your cloudflare.json like this::
+The account API endpoint is configured in your ``cloudflare.json`` like this::
 
 	{
 		"account": {
