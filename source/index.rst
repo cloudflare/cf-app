@@ -17,6 +17,7 @@ Documentation
    development-process
    app-partner-api
    testing
+   authentication
    billing
    customers
 

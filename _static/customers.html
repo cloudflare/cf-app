@@ -8,7 +8,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Testing CloudFlare Apps &mdash; CloudFlare Apps developer documentation</title>
+    <title>CloudFlare Customers &mdash; CloudFlare Apps developer documentation</title>
     
     <link rel="stylesheet" href="_static/default.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
@@ -26,8 +26,7 @@
     <script type="text/javascript" src="_static/underscore.js"></script>
     <script type="text/javascript" src="_static/doctools.js"></script>
     <link rel="top" title="CloudFlare Apps developer documentation" href="index.html" />
-    <link rel="next" title="Authentication" href="authentication.html" />
-    <link rel="prev" title="CloudFlare App Partner API" href="app-partner-api.html" /> 
+    <link rel="prev" title="Billing" href="billing.html" /> 
   </head>
   <body>
     <div class="related">
@@ -37,10 +36,7 @@
           <a href="genindex.html" title="General Index"
              accesskey="I">index</a></li>
         <li class="right" >
-          <a href="authentication.html" title="Authentication"
-             accesskey="N">next</a> |</li>
-        <li class="right" >
-          <a href="app-partner-api.html" title="CloudFlare App Partner API"
+          <a href="billing.html" title="Billing"
              accesskey="P">previous</a> |</li>
         <li><a href="index.html">CloudFlare Apps developer documentation</a> &raquo;</li> 
       </ul>
@@ -51,17 +47,21 @@
         <div class="bodywrapper">
           <div class="body">
             
-  <div class="section" id="testing-cloudflare-apps">
-<h1>Testing CloudFlare Apps<a class="headerlink" href="#testing-cloudflare-apps" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="before-launch">
-<h2>Before launch<a class="headerlink" href="#before-launch" title="Permalink to this headline">¶</a></h2>
-<p>Once an app submission has been accepted, a developer can start testing their app in production as soon as a version has been reviewed and promoted to the live network (see <cite>development process</cite> &lt;development-process.html&gt;`_ for more).</p>
-<p>The app detail page and the CloudFlare dashboard controls will be presented behind authentication, and the dashboard controls will only be visible with parameters added to the dashboard URL (more details coming soon).</p>
-<p>Developer can iterate with versions, and share testing instructions with other CloudFlare customers as a private beta.</p>
+  <div class="section" id="cloudflare-customers">
+<h1>CloudFlare Customers<a class="headerlink" href="#cloudflare-customers" title="Permalink to this headline">¶</a></h1>
+<p>CloudFlare-powered websites reflects the incredible diversity of the Internet as a whole, in location, content, language and goals.</p>
+<p>But all CloudFlare customers share one thing: <strong>they run websites</strong>.</p>
+<p>Customers started using CloudFlare because they want to improve performance and security. More generally, they are actively seeking to improve their websites.</p>
+<div class="section" id="language">
+<h2>Language<a class="headerlink" href="#language" title="Permalink to this headline">¶</a></h2>
+<p>CloudFlare customers are more likely to be technical, but clear language, without jargon, helps everyone.</p>
+<p>CloudFlare aims to make complicated infrastructure easy to understand and use. We encourage the same of app developers, and may comment on language choice.</p>
+<p>While English is often understood by CloudFlare customers, it&#8217;s not the first language for all customers. Developers must note languages supported in their app interfaces.</p>
+<p>CloudFlare&#8217;s English-language site is our most popular, but we are  expanding our translation efforts to ease signup and operation in other languages. Developers don&#8217;t need to take any special steps at this time, but we welcome contributions via <a class="reference external" href="http://translate.cloudflare.com">CloudFlare&#8217;s translation portal</a>, operated by app partner <a class="reference external" href="https://www.cloudflare.com/apps/smartling">Smartling</a>.</p>
 </div>
-<div class="section" id="after-launch">
-<h2>After launch<a class="headerlink" href="#after-launch" title="Permalink to this headline">¶</a></h2>
-<p>CloudFlare supports versions. There is only one version &#8220;promoted&#8221; as the generally available app at any one time, but using parameters, a developer can request different versions on live websites once the versions have been reviewed and approved. (More details coming soon.)</p>
+<div class="section" id="dns">
+<h2>DNS<a class="headerlink" href="#dns" title="Permalink to this headline">¶</a></h2>
+<p>Most customers set up CloudFlare by pointing their domain to CloudFlare&#8217;s global Anycast authoritative DNS. In the future, apps and services which benefit from CNAME creation, for example, may automatically create the necessary CNAMEs with the app install. (Not yet available September 2012.) Customers who set up CloudFlare via their hosting control panel do not move DNS to CloudFlare.</p>
 </div>
 </div>
 
@@ -73,22 +73,19 @@
         <div class="sphinxsidebarwrapper">
   <h3><a href="index.html">Table Of Contents</a></h3>
   <ul>
-<li><a class="reference internal" href="#">Testing CloudFlare Apps</a><ul>
-<li><a class="reference internal" href="#before-launch">Before launch</a></li>
-<li><a class="reference internal" href="#after-launch">After launch</a></li>
+<li><a class="reference internal" href="#">CloudFlare Customers</a><ul>
+<li><a class="reference internal" href="#language">Language</a></li>
+<li><a class="reference internal" href="#dns">DNS</a></li>
 </ul>
 </li>
 </ul>
 
   <h4>Previous topic</h4>
-  <p class="topless"><a href="app-partner-api.html"
-                        title="previous chapter">CloudFlare App Partner API</a></p>
-  <h4>Next topic</h4>
-  <p class="topless"><a href="authentication.html"
-                        title="next chapter">Authentication</a></p>
+  <p class="topless"><a href="billing.html"
+                        title="previous chapter">Billing</a></p>
   <h3>This Page</h3>
   <ul class="this-page-menu">
-    <li><a href="_sources/testing.txt"
+    <li><a href="_sources/customers.txt"
            rel="nofollow">Show Source</a></li>
   </ul>
 <div id="searchbox" style="display: none">
@@ -115,10 +112,7 @@
           <a href="genindex.html" title="General Index"
              >index</a></li>
         <li class="right" >
-          <a href="authentication.html" title="Authentication"
-             >next</a> |</li>
-        <li class="right" >
-          <a href="app-partner-api.html" title="CloudFlare App Partner API"
+          <a href="billing.html" title="Billing"
              >previous</a> |</li>
         <li><a href="index.html">CloudFlare Apps developer documentation</a> &raquo;</li> 
       </ul>

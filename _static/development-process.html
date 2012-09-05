@@ -1,0 +1,209 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Development Process &mdash; CloudFlare Apps developer documentation</title>
+    
+    <link rel="stylesheet" href="_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '',
+        VERSION:     '1.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="top" title="CloudFlare Apps developer documentation" href="index.html" />
+    <link rel="next" title="CloudFlare App Partner API" href="app-partner-api.html" />
+    <link rel="prev" title="Getting started" href="gettingstarted.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="app-partner-api.html" title="CloudFlare App Partner API"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="gettingstarted.html" title="Getting started"
+             accesskey="P">previous</a> |</li>
+        <li><a href="index.html">CloudFlare Apps developer documentation</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="development-process">
+<h1>Development Process<a class="headerlink" href="#development-process" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="prerequisites">
+<h2>Prerequisites<a class="headerlink" href="#prerequisites" title="Permalink to this headline">¶</a></h2>
+<p>There are very few prerequisites for developing a CloudFlare App. You will need:</p>
+<ul class="simple">
+<li>A free account on CloudFlare.com</li>
+<li>A domain on CloudFlare for testing your app. Any CloudFlare plan, including free, is fine.</li>
+<li>A git repo, whether on GitHub.com or elsewhere, with at least the minimum elements from the sample app &lt;<a class="reference external" href="https://github.com/cloudflare/cfapp_sample">https://github.com/cloudflare/cfapp_sample</a>&gt;.</li>
+<li>An app idea, whether integrating an existing web service or creating a new service without dependencies</li>
+</ul>
+</div>
+<div class="section" id="ready">
+<h2>Ready?<a class="headerlink" href="#ready" title="Permalink to this headline">¶</a></h2>
+<p>Ready to start? Here&#8217;s the steps:</p>
+<ul class="simple">
+<li>Submit your app idea, with a git repo link. <a class="reference external" href="https://www.cloudflare.com/app-signup.html">https://www.cloudflare.com/app-signup.html</a></li>
+<li>CloudFlare Apps team will review your app submission. On approval of the initial submission, your application&#8217;s AppKey will be confirmed and CloudFlare Apps team will follow up with you, via email to start.</li>
+<li>Upon approval, the app&#8217;s status will be shown in your development dashboard.</li>
+</ul>
+</div>
+<div class="section" id="status-of-an-app">
+<h2>Status of an App<a class="headerlink" href="#status-of-an-app" title="Permalink to this headline">¶</a></h2>
+<p>An app goes through each of the following stages, often in rapid succession. CloudFlare&#8217;s goal is to respond to all developer inquiries in one business day or less. Complicated reviews, especially first-time reviews, may require more time, but the developer can expect notification within one business day.</p>
+<ul class="simple">
+<li>Submission</li>
+<li>Stage</li>
+<li>Review</li>
+<li>Approve</li>
+<li>Promote</li>
+<li>Published</li>
+</ul>
+<dl class="docutils">
+<dt>Submission</dt>
+<dd>App has been submitted for review to CloudFlare by developer. When CloudFlare assigns an AppKey the app is proceeding. After the initial submission, new versions are submitted via a Pull request in the CloudFlare dashboard.</dd>
+<dt>Stage</dt>
+<dd>New pull request from App developer has been acknowledged by CloudFlare, and the new repo is staged on CloudFlare internal systems, awaiting review. (TK - what new versions look like</dd>
+<dt>Review</dt>
+<dd>CloudFlare is reviewing the app version. If a new version is submitted while an existing version is in review, the new version will be evaluated separately/later. If a new version is staged <em>before</em> review, the earlier version will be ignored.</dd>
+<dt>Approve</dt>
+<dd>CloudFlare has approved the update. If this update is the first version of the app, the app will now be available on the CloudFlare network, and ready for private beta testing. However, the app is not publicly available until it&#8217;s been Published.</dd>
+<dt>Promote</dt>
+<dd>Multiple versions of an app may be live on the global network, but only the Promoted version is available to all customers without manual configuration of client parameters. The promoted version is the released version, and additional development may be done in new versions, tested by the developer and in-the-know testers. When a new version is ready for general release, the new version will be promoted.</dd>
+<dt>Publish</dt>
+<dd>CloudFlare removes authentication and app is available to all CloudFlare customers.</dd>
+</dl>
+</div>
+<div class="section" id="review-process">
+<h2>Review Process<a class="headerlink" href="#review-process" title="Permalink to this headline">¶</a></h2>
+<p>The goal of CloudFlare Apps is to have useful services of all kinds instantly and easily available to CloudFlare customers on CloudFlare-powered websites.</p>
+<p>Apps cannot compromise on the core CloudFlare benefits of website speed and security, and making things easy.</p>
+<p>New apps are reviewed with the following concerns:</p>
+<ul class="simple">
+<li>Are there any security considerations?</li>
+<li>Are there any performance considerations?</li>
+<li>Are the services described accurately?</li>
+<li>Is the &#8220;install&#8221; experience smooth?</li>
+<li>Does turning off the app work smoothly?</li>
+</ul>
+<p>To maintain security, CloudFlare reviews apps for vulnerabilities and malware of all sorts.</p>
+<p>To maintain performance, CloudFlare offers the resources of its global network to app developers at no charge.</p>
+</div>
+<div class="section" id="exclusivity">
+<h2>Exclusivity<a class="headerlink" href="#exclusivity" title="Permalink to this headline">¶</a></h2>
+<p>The CloudFlare Apps marketplace is not exclusive in any category.</p>
+</div>
+<div class="section" id="conflicts">
+<h2>Conflicts<a class="headerlink" href="#conflicts" title="Permalink to this headline">¶</a></h2>
+<p>CloudFlare makes efforts to notify customers if technical concerns limit the use of separate apps at the same time. For example, two different link re-writing services could interact erratically,  confusing the customer and the customer&#8217;s website visitors.</p>
+</div>
+<div class="section" id="contract">
+<h2>Contract<a class="headerlink" href="#contract" title="Permalink to this headline">¶</a></h2>
+<p>If an app involves billing of or payments to a site owner (CloudFlare customer), the developer must sign CloudFlare&#8217;s standard application contract before the app is published and generally available to all customers.</p>
+</div>
+<div class="section" id="billing-and-payments">
+<h2>Billing and Payments<a class="headerlink" href="#billing-and-payments" title="Permalink to this headline">¶</a></h2>
+<p>For services where the CloudFlare customer pays, CloudFlare does the billing, and pays the developer 70% on a monthly basis, via ACH or other means if appropriate. CloudFlare supports freemium models; upgrade links, though, must return to CloudFlare for billing.</p>
+<p>For services which earn the CloudFlare customer money, such as advertising or affiliate networks, the developer will pay CloudFlare monthly via ACH, and CloudFlare will pay the CloudFlare customer the customer&#8217;s share. After the customer is paid (usually the majority), CloudFlare and the developer will split the remainder.</p>
+</div>
+<div class="section" id="license">
+<h2>License<a class="headerlink" href="#license" title="Permalink to this headline">¶</a></h2>
+<p>The developer may choose to apply a license to his or her app, as long as the license choice doesn&#8217;t limit use on the CloudFlare network.</p>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Development Process</a><ul>
+<li><a class="reference internal" href="#prerequisites">Prerequisites</a></li>
+<li><a class="reference internal" href="#ready">Ready?</a></li>
+<li><a class="reference internal" href="#status-of-an-app">Status of an App</a></li>
+<li><a class="reference internal" href="#review-process">Review Process</a></li>
+<li><a class="reference internal" href="#exclusivity">Exclusivity</a></li>
+<li><a class="reference internal" href="#conflicts">Conflicts</a></li>
+<li><a class="reference internal" href="#contract">Contract</a></li>
+<li><a class="reference internal" href="#billing-and-payments">Billing and Payments</a></li>
+<li><a class="reference internal" href="#license">License</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="gettingstarted.html"
+                        title="previous chapter">Getting started</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="app-partner-api.html"
+                        title="next chapter">CloudFlare App Partner API</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="_sources/development-process.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="app-partner-api.html" title="CloudFlare App Partner API"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="gettingstarted.html" title="Getting started"
+             >previous</a> |</li>
+        <li><a href="index.html">CloudFlare Apps developer documentation</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2012, CloudFlare, Inc..
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.1.3.
+    </div>
+  </body>
+</html>
