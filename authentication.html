@@ -55,10 +55,9 @@
   <div class="section" id="authentication">
 <h1>Authentication<a class="headerlink" href="#authentication" title="Permalink to this headline">¶</a></h1>
 <p>Many apps have a robust suite of services on their own dashboards. CloudFlare offers an authenticated link to these dashboards from the CloudFlare Apps dashboard, where CloudFlare customers are signed in.</p>
-<p>CloudFlare Apps offers single sign-on (SSO) using a HMAC link. The HMAC key will be shared via the CloudFlare developer dashboard. (Screenshot to be added.)</p>
-<p>Developers may also offer direct sign-in to their services, using the account created via CloudFlare Apps. CloudFlare will not know the customers&#8217; password (and doesn&#8217;t want to), so the developer will need to consider the authentication process and how to communicate to the customer about this option (email, or first visit, or other).</p>
-<p>Suggestions and recommendations coming soon.</p>
-<p>Note: CloudFlare is not an OAuth provider.</p>
+<p>CloudFlare Apps that use the <a class="reference external" href="app-partner-api.html">Accounts API</a> will be given an HMAC key when the app is created. Requests from the Accounts API will be signed with that key. Developers can include a &#8220;login&#8221; object in their response to the account creation request (POST to /accounts). If a login object with a &#8220;url&#8221; key is present, a link to that URL will be displayed in the apps control panel under the short description. This link should contain a token that allows the user to log in directly.</p>
+<p>It is recommended that HTTPS be used both for the Accounts API endpoint and for these login link URLs</p>
+<p>CloudFlare does not support OAuth for customer login.</p>
 </div>
 
 
