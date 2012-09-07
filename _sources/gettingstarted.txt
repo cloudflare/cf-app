@@ -53,16 +53,18 @@ Apps may site owners time, make money or simply bring a smile to a visitor’s f
 Current CloudFlare Apps
 -----------------------
 
-Several dozen Apps have been developed in close coordination between
-CloudFlare developers and outside developers.
+Dozens of Apps have been developed in close coordination between
+CloudFlare developers and outside developers: <https://www.cloudflare.com/apps>
 
-More recently, CloudFlare’s platform has evolved to free developers to work on their own schedule. These apps all take advantage of the latest iteration of the platform:
+CloudFlare’s platform now supports more independent work, with a fuller toolset, supported by the CloudFlare Apps team.
+
+These apps all take advantage of the latest iteration of the platform:
 
 * `Trumpet <https://www.cloudflare.com/apps/trumpet>`_
+* `A Better Browser <https://www.cloudflare.com/apps/abetterbrowser>`_
 * `EarthHour <https://www.cloudflare.com/apps/earthhour>`_
 * `Instaflare <https://www.cloudflare.com/apps/instaflare>`_
 * `Visitor DNSChanger Detector <https://github.com/cloudflare/dnschanger_detector>`_ (repo link, since app was disabled after deadline)
-* A Better Browser <https://www.cloudflare.com/apps/abetterbrowser>`_
 
 What can CloudFlare Apps do?
 ----------------------------
@@ -99,13 +101,13 @@ Options include:
 Global delivery
 ~~~~~~~~~~~~~~~
 
-CloudFlare will host and deliver App assets (JavaScript, images, CSS,
-and more) from its global network at no charge to App developers. Current network map: http://www.cloudflare.com/network-map
+CloudFlare will host and deliver app assets (JavaScript, images, CSS,
+and more) from its global network at no charge to app developers. Current network map: http://www.cloudflare.com/network-map
 
 DNS manipulation
 ~~~~~~~~~~~~~~~~
 
-CNAME creation, primarily, but other DNS record types possible. Exception: hosting partners/CNAME customers.
+CNAME creation, primarily, but other DNS record types possible. Majority of CloudFlare customers use CloudFlare as their global Anycast authoritative DNS provider.
 
 Development via git
 ~~~~~~~~~~~~~~~~~~~
