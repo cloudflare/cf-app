@@ -62,8 +62,8 @@ filters attacks of all kinds before they reaches the site owner’s
 server. CloudFlare customers deliver all web traffic to their visitors
 through CloudFlare’s network.</p>
 </div>
-<div class="section" id="cloudflare-numbers">
-<h2>CloudFlare numbers<a class="headerlink" href="#cloudflare-numbers" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="cloudflare-reach">
+<h2>CloudFlare reach<a class="headerlink" href="#cloudflare-reach" title="Permalink to this headline">¶</a></h2>
 <p>CloudFlare launched its public service in September, 2010.</p>
 <p>As of September, 2012, CloudFlare:</p>
 <ul class="simple">
@@ -90,57 +90,44 @@ this audience.</p>
 <div class="section" id="what-are-cloudflare-apps">
 <h2>What are CloudFlare Apps?<a class="headerlink" href="#what-are-cloudflare-apps" title="Permalink to this headline">¶</a></h2>
 <p>CloudFlare Apps are services useful to website owners, integrated with a simple dashboard choice on any CloudFlare-powered website.</p>
-<p>Two criteria to be a CloudFlare App:</p>
-<ol class="arabic simple">
-<li>Make a website owner’s life better.</li>
-<li>Take advantage of CloudFlare’s platform.</li>
-</ol>
-<p>CloudFlare’s platform is fantastic for many web services and utilities. CloudFlare Apps is not simply to promote outside services; they must be integrated. CloudFlare isn’t promoting services that are not integrated as apps.</p>
 </div>
 <div class="section" id="goals-of-cloudflare-apps">
 <h2>Goals of CloudFlare Apps<a class="headerlink" href="#goals-of-cloudflare-apps" title="Permalink to this headline">¶</a></h2>
 <p>The primary goal of CloudFlare Apps is to make CloudFlare customers happier, by making their websites even better through easy integration of outside services.</p>
-<p>Apps may save time, make money or simply bring a smile to a visitor’s face.</p>
+<p>Apps may site owners time, make money or simply bring a smile to a visitor’s face.</p>
 </div>
 <div class="section" id="current-cloudflare-apps">
 <h2>Current CloudFlare Apps<a class="headerlink" href="#current-cloudflare-apps" title="Permalink to this headline">¶</a></h2>
 <p>Several dozen Apps have been developed in close coordination between
-CloudFlare developers and outside developers. More recently,
-CloudFlare’s platform has evolved to free developers to work on their
-own schedule. These apps all take advantage of the latest iteration of
-the platform:</p>
+CloudFlare developers and outside developers.</p>
+<p>More recently, CloudFlare’s platform has evolved to free developers to work on their own schedule. These apps all take advantage of the latest iteration of the platform:</p>
 <ul class="simple">
-<li>Trumpet</li>
-<li>EarthHour</li>
-<li>Instaflare</li>
-<li>Visitor DNSChanger Detector</li>
-<li>A Better Browser</li>
+<li><a class="reference external" href="https://www.cloudflare.com/apps/trumpet">Trumpet</a></li>
+<li><a class="reference external" href="https://www.cloudflare.com/apps/earthhour">EarthHour</a></li>
+<li><a class="reference external" href="https://www.cloudflare.com/apps/instaflare">Instaflare</a></li>
+<li><a class="reference external" href="https://github.com/cloudflare/dnschanger_detector">Visitor DNSChanger Detector</a> (repo link, since app was disabled after deadline)</li>
+<li>A Better Browser &lt;<a class="reference external" href="https://www.cloudflare.com/apps/abetterbrowser">https://www.cloudflare.com/apps/abetterbrowser</a>&gt;`_</li>
 </ul>
 </div>
 <div class="section" id="what-can-cloudflare-apps-do">
 <h2>What can CloudFlare Apps do?<a class="headerlink" href="#what-can-cloudflare-apps-do" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="distribution">
 <h3>Distribution<a class="headerlink" href="#distribution" title="Permalink to this headline">¶</a></h3>
-<p>Reach website owners who care about making their website better. (see
-numbers)</p>
+<p>Reach website owners who care about improving their website.</p>
 </div>
 <div class="section" id="account-creation">
 <h3>Account creation<a class="headerlink" href="#account-creation" title="Permalink to this headline">¶</a></h3>
-<p>CloudFlare can create an account on the developer’s service
-automatically, via API.</p>
-<p>Developer has a relationship with the site owner, even if site owner
-leaves CloudFlare.</p>
+<p>For outside services, CloudFlare creates an account on the developer’s service automatically, via API.</p>
 <p>Default information and app-specific info can be requested or required.</p>
 </div>
 <div class="section" id="javascript-deployment">
 <h3>JavaScript deployment<a class="headerlink" href="#javascript-deployment" title="Permalink to this headline">¶</a></h3>
 <p>For those apps which integrate JavaScript on to a customer&#8217;s page, CloudFlare Apps is remarkable. The #1 support problem of most services which need JavaScript deployment is getting the code on the page in the right place – even <strong>after</strong> the customer has paid for the service. CloudFlare does that instantly, in seconds.</p>
 <p>CloudFlareJS, the CloudFlare performant loader, allows site owners to install multiple apps without fear of slowing their sites.</p>
-<p>Scripts, images, and CSS (if needed) are served from global CDN at no charge.</p>
 </div>
 <div class="section" id="billing">
 <h3>Billing<a class="headerlink" href="#billing" title="Permalink to this headline">¶</a></h3>
-<p>CloudFlare provides a billing platform and simply adds App charges to a customer’s existing account.</p>
+<p>CloudFlare provides a billing platform, simply adding App charges to a customer’s existing account.</p>
 <p>Options include:</p>
 <ul class="simple">
 <li>Monthly (pro-rated) charges</li>
@@ -154,7 +141,7 @@ and more) from its global network at no charge to App developers. Current networ
 </div>
 <div class="section" id="dns-manipulation">
 <h3>DNS manipulation<a class="headerlink" href="#dns-manipulation" title="Permalink to this headline">¶</a></h3>
-<p><em>More soon here</em> CNAME creation, primarily. Other DNS record types possible. Exception: hosting partners/CNAME customers.</p>
+<p>CNAME creation, primarily, but other DNS record types possible. Exception: hosting partners/CNAME customers.</p>
 </div>
 <div class="section" id="development-via-git">
 <h3>Development via git<a class="headerlink" href="#development-via-git" title="Permalink to this headline">¶</a></h3>
@@ -171,14 +158,14 @@ updates. Versioning supported. Private and public beta testing supported.</p>
 for example), directories or even individual pages for App
 deployment. Currently, Apps are deployed site-wide, with exclusion
 possible via Page Rules.</li>
-<li>Sandbox - Controlled domain and account where developers may view live apps and test their own apps beyond their own domain.</li>
 <li>Credit card numbers for testing billing end-to-end</li>
+<li>Sandbox - Controlled domain and account where developers may view live apps and test their own apps beyond their own domain.</li>
 <li>cloudflare.json linter</li>
 </ul>
 </div>
 <div class="section" id="promotion">
 <h2>Promotion<a class="headerlink" href="#promotion" title="Permalink to this headline">¶</a></h2>
-<p>CloudFlare promotes Apps in multiple places at multiple times.</p>
+<p>CloudFlare promotes Apps in multiple places at multiple times. Here&#8217;s some of the possibilities. We are open to new ideas.</p>
 <ul class="simple">
 <li>Apps marketplace &lt;<a class="reference external" href="https://www.cloudflare.com/apps">https://www.cloudflare.com/apps</a>&gt;</li>
 <li>App detail page &lt;<a class="reference external" href="https:/www.cloudflare.com/apps/trumpet">https:/www.cloudflare.com/apps/trumpet</a>&gt; (example)</li>
@@ -204,7 +191,7 @@ possible via Page Rules.</li>
   <ul>
 <li><a class="reference internal" href="#">Getting started</a><ul>
 <li><a class="reference internal" href="#what-is-cloudflare">What is CloudFlare?</a></li>
-<li><a class="reference internal" href="#cloudflare-numbers">CloudFlare numbers</a></li>
+<li><a class="reference internal" href="#cloudflare-reach">CloudFlare reach</a></li>
 <li><a class="reference internal" href="#what-are-cloudflare-apps">What are CloudFlare Apps?</a></li>
 <li><a class="reference internal" href="#goals-of-cloudflare-apps">Goals of CloudFlare Apps</a></li>
 <li><a class="reference internal" href="#current-cloudflare-apps">Current CloudFlare Apps</a></li>

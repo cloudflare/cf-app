@@ -14,7 +14,7 @@
 /* -- page layout ----------------------------------------------------------- */
 
 body {
-    font-family: serif;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-size: 100%;
     background-color: #11303d;
     color: #000;
@@ -55,7 +55,7 @@ div.footer a {
 }
 
 div.related {
-    background-color: #133f52;
+    background-color: #E6E6E6;
     line-height: 30px;
     color: #ffffff;
 }
@@ -68,7 +68,7 @@ div.sphinxsidebar {
 }
 
 div.sphinxsidebar h3 {
-    font-family: 'Trebuchet MS', sans-serif;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     color: #ffffff;
     font-size: 1.4em;
     font-weight: normal;
@@ -81,7 +81,7 @@ div.sphinxsidebar h3 a {
 }
 
 div.sphinxsidebar h4 {
-    font-family: 'Trebuchet MS', sans-serif;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     color: #ffffff;
     font-size: 1.3em;
     font-weight: normal;
@@ -118,7 +118,7 @@ div.sphinxsidebar input {
 /* -- hyperlink styles ------------------------------------------------------ */
 
 a {
-    color: #355f7c;
+    color: #2F7BBF;
     text-decoration: none;
 }
 
@@ -141,7 +141,7 @@ div.body h3,
 div.body h4,
 div.body h5,
 div.body h6 {
-    font-family: 'Trebuchet MS', sans-serif;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     background-color: #f2f2f2;
     font-weight: normal;
     color: #20435c;
@@ -158,7 +158,7 @@ div.body h5 { font-size: 110%; }
 div.body h6 { font-size: 100%; }
 
 a.headerlink {
-    color: #c60f0f;
+    color: #2F7BBF;
     font-size: 0.8em;
     padding: 0 4px 0 4px;
     text-decoration: none;

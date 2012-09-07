@@ -11,8 +11,8 @@ filters attacks of all kinds before they reaches the site owner’s
 server. CloudFlare customers deliver all web traffic to their visitors
 through CloudFlare’s network.
 
-CloudFlare numbers
-------------------
+CloudFlare reach
+----------------
 
 CloudFlare launched its public service in September, 2010.
 
@@ -43,34 +43,26 @@ What are CloudFlare Apps?
 
 CloudFlare Apps are services useful to website owners, integrated with a simple dashboard choice on any CloudFlare-powered website.
 
-Two criteria to be a CloudFlare App:
-
-1. Make a website owner’s life better.
-2. Take advantage of CloudFlare’s platform.
-
-CloudFlare’s platform is fantastic for many web services and utilities. CloudFlare Apps is not simply to promote outside services; they must be integrated. CloudFlare isn’t promoting services that are not integrated as apps.
-
 Goals of CloudFlare Apps
 ------------------------
 
 The primary goal of CloudFlare Apps is to make CloudFlare customers happier, by making their websites even better through easy integration of outside services.
 
-Apps may save time, make money or simply bring a smile to a visitor’s face.
+Apps may site owners time, make money or simply bring a smile to a visitor’s face.
 
 Current CloudFlare Apps
 -----------------------
 
 Several dozen Apps have been developed in close coordination between
-CloudFlare developers and outside developers. More recently,
-CloudFlare’s platform has evolved to free developers to work on their
-own schedule. These apps all take advantage of the latest iteration of
-the platform:
+CloudFlare developers and outside developers.
 
-* Trumpet
-* EarthHour
-* Instaflare
-* Visitor DNSChanger Detector
-* A Better Browser
+More recently, CloudFlare’s platform has evolved to free developers to work on their own schedule. These apps all take advantage of the latest iteration of the platform:
+
+* `Trumpet <https://www.cloudflare.com/apps/trumpet>`_
+* `EarthHour <https://www.cloudflare.com/apps/earthhour>`_
+* `Instaflare <https://www.cloudflare.com/apps/instaflare>`_
+* `Visitor DNSChanger Detector <https://github.com/cloudflare/dnschanger_detector>`_ (repo link, since app was disabled after deadline)
+* A Better Browser <https://www.cloudflare.com/apps/abetterbrowser>`_
 
 What can CloudFlare Apps do?
 ----------------------------
@@ -78,17 +70,12 @@ What can CloudFlare Apps do?
 Distribution
 ~~~~~~~~~~~~
 
-Reach website owners who care about making their website better. (see
-numbers)
+Reach website owners who care about improving their website.
 
 Account creation
 ~~~~~~~~~~~~~~~~
 
-CloudFlare can create an account on the developer’s service
-automatically, via API.
-
-Developer has a relationship with the site owner, even if site owner
-leaves CloudFlare.
+For outside services, CloudFlare creates an account on the developer’s service automatically, via API.
 
 Default information and app-specific info can be requested or required.
 
@@ -99,12 +86,10 @@ For those apps which integrate JavaScript on to a customer's page, CloudFlare Ap
 
 CloudFlareJS, the CloudFlare performant loader, allows site owners to install multiple apps without fear of slowing their sites.
 
-Scripts, images, and CSS (if needed) are served from global CDN at no charge.
-
 Billing
 ~~~~~~~
 
-CloudFlare provides a billing platform and simply adds App charges to a customer’s existing account.
+CloudFlare provides a billing platform, simply adding App charges to a customer’s existing account.
 
 Options include:
 
@@ -120,7 +105,7 @@ and more) from its global network at no charge to App developers. Current networ
 DNS manipulation
 ~~~~~~~~~~~~~~~~
 
-*More soon here* CNAME creation, primarily. Other DNS record types possible. Exception: hosting partners/CNAME customers.
+CNAME creation, primarily, but other DNS record types possible. Exception: hosting partners/CNAME customers.
 
 Development via git
 ~~~~~~~~~~~~~~~~~~~
@@ -137,15 +122,14 @@ Roadmap
    for example), directories or even individual pages for App
    deployment. Currently, Apps are deployed site-wide, with exclusion
    possible via Page Rules.
--  Sandbox - Controlled domain and account where developers may view live apps and test their own apps beyond their own domain.
 -  Credit card numbers for testing billing end-to-end
+-  Sandbox - Controlled domain and account where developers may view live apps and test their own apps beyond their own domain.
 -  cloudflare.json linter
-
 
 Promotion
 ---------
 
-CloudFlare promotes Apps in multiple places at multiple times.
+CloudFlare promotes Apps in multiple places at multiple times. Here's some of the possibilities. We are open to new ideas.
 
 -  Apps marketplace <https://www.cloudflare.com/apps>
 -  App detail page <https:/www.cloudflare.com/apps/trumpet> (example)
