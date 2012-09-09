@@ -50,14 +50,14 @@ div.footer {
 }
 
 div.footer a {
-    color: #ffffff;
+    color: #2F7BBF;
     text-decoration: underline;
 }
 
 div.related {
     background-color: #E6E6E6;
     line-height: 30px;
-    color: #ffffff;
+    color: #000000;
 }
 
 div.related a {
@@ -108,7 +108,7 @@ div.sphinxsidebar a {
 }
 
 div.sphinxsidebar input {
-    border: 1px solid #98dbcc;
+    border: 1px solid #2F7BBF;
     font-family: sans-serif;
     font-size: 1em;
 }
