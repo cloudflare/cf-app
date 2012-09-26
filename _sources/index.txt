@@ -16,6 +16,8 @@ Documentation
    gettingstarted
    development-process
    app-partner-api
+   cloudflare-json
+   categories
    testing
    authentication
    billing
@@ -33,5 +35,3 @@ Developer Support
 The CloudFlare Apps team is happy to answer questions, starting with email to apps+support@cloudflare.com
 
 Team is based in San Francisco, California, USA, so consider the time zone if your reply is delayed.
-
-September 8-9, 2012 - find us at TechCrunch Disrupt Hackathon, wearing CloudFlare t-shirts.
