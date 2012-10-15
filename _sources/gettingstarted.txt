@@ -48,7 +48,7 @@ Goals of CloudFlare Apps
 
 The primary goal of CloudFlare Apps is to make CloudFlare customers happier, by making their websites even better through easy integration of outside services.
 
-Apps may site owners time, make money or simply bring a smile to a visitor’s face.
+Apps might save site owners' time, improve their operations, make them more money or simply bring a smile to a visitor’s face.
 
 Current CloudFlare Apps
 -----------------------
