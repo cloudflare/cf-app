@@ -1,0 +1,19 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+@media (min-width: 768px) {
+  /* line 9, screen.scss */
+  body {
+    padding-top: 60px;
+    /* 60px to make the container go all the way to the bottom of the topbar */ } }
+/* line 14, screen.scss */
+#cloudflare_json_manifest_doc span.key {
+  border-bottom: 1px dotted #aaaaaa; }
+
+/* line 18, screen.scss */
+#footer {
+  margin-top: 30px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(153, 153, 153, 0.3);
+  text-align: center; }
