@@ -1,5 +1,5 @@
 (function(document, window, $) {
     $(function() {
-        window.prettyPrint && prettyPrint()
+        $('div.highlight').each(function(i, e) {hljs.highlightBlock(e)});
     });
 })(document, window, jQuery);
