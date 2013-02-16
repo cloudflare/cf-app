@@ -164,6 +164,83 @@
     </table>
     
     <h3>Responding to requests</h3>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>HTTP Method</th>
+                <th>API Endpoint</th>
+                <th class="span6">Response</th>
+                <th>Notes</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><span class="label label-info">POST</span></td>
+                <td>/accounts</td>
+                <td>
+<pre><code class="json">{
+    "account_id": "9",
+    "status": "approved",
+    "msg": "Account created"
+}
+</code></pre>
+                </td>
+                <td>"status" can be one of "approved", "pending" or "rejected"</td>
+            </tr>
+            <tr>
+                <td><span class="label label-info">POST</span></td>
+                <td>/domains</td>
+                <td>
+<pre><code class="json">{
+    "account_id": "13",
+    "domain_id": "1580",
+    "status": "approved",
+    "msg": "Domain approved"
+}
+</code></pre>
+                </td>
+                <td>"status" can be one of "approved", "pending" or "rejected"</td>
+            </tr>
+            <tr>
+                <td><span class="label label-info">DELETE</span></td>
+                <td>/domains/&lt;domain_id&gt;</td>
+                <td>
+<pre><code class="json">{
+    "account_id": 13,
+    "domain_id": 1580,
+    "msg": "Domain has been deleted"
+}
+</code></pre>
+                </td>
+                <td></td>
+            </tr>
+            <tr>
+                <td><span class="label label-info">POST</span></td>
+                <td>/subscriptions</td>
+                <td>
+<pre><code class="json">{
+    "domain_id": 13,
+    "msg": "Subscription updated"
+}
+</code></pre>
+                </td>
+                <td></td>
+            </tr>
+            <tr>
+                <td><span class="label label-info">POST</span></td>
+                <td>/subscriptions</td>
+                <td>
+<pre><code class="json">{
+    "domain_id": 13,
+    "sub_plan": ""
+    "msg": "Subscription updated"
+}
+</code></pre>
+                </td>
+                <td></td>
+            </tr>
+        </tbody>
+    </table>
 </div>
 
 
