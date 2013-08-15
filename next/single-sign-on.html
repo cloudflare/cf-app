@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Single Sign On — CloudFlare Apps Documentation</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="stylesheets/bootstrap.min.css" media="screen" rel="stylesheet" type="text/css" />
+<link href="stylesheets/screen.css" media="screen" rel="stylesheet" type="text/css" />
+<link href="stylesheets/tomorrow.min.css" media="screen" rel="stylesheet" type="text/css" />
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+        <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+
+    <div class="navbar navbar-fixed-top">
+        <div class="navbar-inner">
+            <div class="container">
+                <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </a>
+                <a class="brand" href="#">CloudFlare Apps</a>
+                <div class="nav-collapse collapse">
+                    <ul class="nav">
+                        <li class="active"><a href="/">Docs</a></li>
+                        <!-- <li><a href="/docs.html">Docs</a></li>
+                        <li><a href="/feedback.html">Feedback</a></li> -->
+                    </ul>
+                </div><!--/.nav-collapse -->
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+
+        <div class="row" id="header">
+            
+        </div>
+
+        <div class="row">
+            <div class="span12">
+                <div class="row">
+    <div class="span2">
+        
+    </div>
+    <div class="span8">
+        <h2>Single Sign On</h2>
+        <p>Documentation for allowing users to log into your app's dashboard</p>
+
+        <div id="sso_doc">
+            <p>In order to provide the user a way to access your app&#39;s dashboard, we use a single sign on mechanism based on HMAC.</p>
+
+            <p>When the user account is created, in response to the POST to /accounts you will provide a login URL that will be a URL on your system that can identify the user. CloudFlare will sign this URL and append a signature and an expiration timestamp that you can verify and if everything checks out, you can log the user in.</p>
+
+            <p>Params to expect</p>
+
+            <ul>
+            <li>cf-timestamp</li>
+            <li>cf-signature</li>
+            </ul>
+
+            <h3>Authentication</h3>
+
+            <p>Authenticate by verifying both the above URL parameters.</p>
+
+            <p>cf-timestamp is a UNIX timestamp which represents the last valid time at which this URL is still valid. When this timestamp is less than the current time then reject the user. The upper bound would be 5 mins from now.</p>
+
+            <p>URL is still valid when
+                <ul>
+                    <li>now &gt; cf-timestamp</li>
+                    <li>cf-timestamp &lt; now + 300 seconds</li>
+                </ul>
+            </p>
+
+            <p>The other parameter is the signature which is an HMAC generated from data in the URL along with the timestamp, signed using the app specific shared secret (available in the App Developer Dashboard (https://www.cloudfalre.com/app-signup) with sha256 as the algorithm.</p>
+
+            <p>The data that is used to generate the signature is the login URL that was returned during account creation, with any query params removed, concatenated with the cf-timestamp.</p>
+
+            <p>In PHP you could re-generate the signature using the following code</p>
+
+<pre class="highlight php">    <span class="cp">&lt;?php</span>
+
+    <span class="nv">$timestamp</span> <span class="o">=</span> <span class="nv">$_GET</span><span class="p">[</span><span class="s2">&quot;cf-timestamp&quot;</span><span class="p">];</span>
+
+    <span class="k">if</span> <span class="p">(</span><span class="nv">$timestamp</span> <span class="o">&lt;</span> <span class="nb">time</span><span class="p">())</span> <span class="p">{</span>
+        <span class="c1">// login URL has expired
+</span>        <span class="c1">// do not let the user in
+</span>    <span class="p">}</span>
+
+    <span class="nv">$shared_secret</span> <span class="o">=</span> <span class="s2">&quot;&lt;get from app dev dash&gt;&quot;</span><span class="p">;</span>
+
+    <span class="nv">$data</span> <span class="o">=</span> <span class="s2">&quot;&lt;original URL sent to us during account creation with query params (?key=val..) removed&gt;&quot;</span> <span class="o">.</span> <span class="nv">$timestamp</span>
+
+    <span class="nv">$signature</span> <span class="o">=</span> <span class="nb">hash_hmac</span><span class="p">(</span><span class="s2">&quot;sha256&quot;</span><span class="p">,</span> <span class="nv">$data</span><span class="p">,</span> <span class="nv">$shared_secret</span><span class="p">);</span>
+
+    <span class="c1">// make sure signature generated by you matches the signature that is in the URL
+</span>    <span class="k">if</span> <span class="p">(</span><span class="nv">$signature</span> <span class="o">!==</span> <span class="nv">$_GET</span><span class="p">[</span><span class="s1">&#39;cf-signature&#39;</span><span class="p">])</span> <span class="p">{</span>
+        <span class="c1">// do not let the user in
+</span>    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+        <span class="c1">// log the user in
+</span>    <span class="p">}</span>
+
+    <span class="cp">?&gt;</span>
+</pre>
+
+            <p>When both the timestamp and signature have been verified, you can safely allow the user into your dashboard.</p>
+
+        </div>
+    <div class="span2">
+        
+    </div>
+</div>
+
+            </div>
+        </div>
+
+        <div class="row" id="footer">
+            <div class="span12">
+                <p class="muted">CloudFlare Apps</p>
+            </div>
+
+        </div>
+
+    </div> <!-- /container -->
+    <script src="javascripts/jquery.min.js" type="text/javascript"></script>
+<script src="javascripts/bootstrap.min.js" type="text/javascript"></script>
+<script src="javascripts/appdev.js" type="text/javascript"></script>
+<script src="javascripts/highlight.min.js" type="text/javascript"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <script src="javascripts/cloudflare-json.js" type="text/javascript"></script>
+
+</body>
+</html>
