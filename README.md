@@ -15,4 +15,4 @@ Apps platform team at CloudFlare (with help and suggestions from current app par
 This is a static site built using [Jekyll](http://jekyllrb.com/), auto-generated and hosted by [GitHub Pages](http://pages.github.com/), accelerated and protected by [CloudFlare](https://www.cloudflare.com/).
 
 ## Contributing
-New files are created under _source, can use markdown or plain old HTML. Be sure to add the `front matter` at the top, and just write your content part, the container and a title h1 will be automatically added. Take a look at the example page `_site/docs/sample.md`
+New files are created under _source, can use markdown or plain old HTML. Be sure to add the `front matter` at the top, and just write your content part, the container and a title h1 will be automatically added. Take a look at the example page `docs/sample.md`
