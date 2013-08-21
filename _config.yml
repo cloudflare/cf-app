@@ -1,3 +1,5 @@
-name: Your New Jekyll Site
+name: App Developer Documentation
 markdown: redcarpet
 pygments: true
+permalink: /:title
+source: _source
