@@ -7,8 +7,8 @@ title: Documentation
 
 Make sure you are signed up as an App developer
 
-<p><span class="glyphicon glyphicon-check"></span> &nbsp; <a href="https://www.cloudflare.com/sign-up">Signup</a> for a CloudFlare account (your existing account will work too)</p>
-<p><span class="glyphicon glyphicon-check"></span> &nbsp; Login using your CloudFlare account and signup as an <a href="https://www.cloudflare.com/app-signup">App Developer</a> (it's free and instantaneous)
+<p><span class="glyphicon glyphicon-check"></span> &nbsp; <a href="https://www.cloudflare.com/sign-up" target="_blank">Signup</a> for a CloudFlare account (your existing account will work too)</p>
+<p><span class="glyphicon glyphicon-check"></span> &nbsp; Login using your CloudFlare account and signup as an <a href="https://www.cloudflare.com/app-signup" target="_blank">App Developer</a> (it's free and instantaneous)
 </p>
 
 ## Docs
