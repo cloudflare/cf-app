@@ -147,7 +147,7 @@ title: API Calls
 }
 </code></pre>
                 </td>
-                <td>"status" can be one of "approved", "pending" or "rejected"</td>
+                <td>"status" can be one of "approved", "pending" or "rejected". See <a href="/docs/single-sign-on.html">Single Sign-on documentation</a> for what the url attribute should be set to.</td>
             </tr>
             <tr>
                 <td><col-md- class="label label-info">POST</col-md-></td>
