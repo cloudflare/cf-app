@@ -88,7 +88,7 @@ title: API Calls
                 <td>/subscriptions</td>
                 <td>
 <pre><code class="json">{
-    "domain_id": 13,
+    "domain_id": 1580,
     "sub_plan": "App Name Plan Name"
 }
 </code></pre>
@@ -100,7 +100,7 @@ title: API Calls
                 <td>/subscriptions</td>
                 <td>
 <pre><code class="json">{
-    "domain_id": 13,
+    "domain_id": 1580,
     "sub_plan": "App Name Plan Name"
 }
 </code></pre>
@@ -112,7 +112,7 @@ title: API Calls
                 <td>/subscriptions</td>
                 <td>
 <pre><code class="json">{
-    "domain_id": 13,
+    "domain_id": 1580,
     "sub_plan": ""
 }
 </code></pre>
@@ -184,7 +184,7 @@ title: API Calls
                 <td>/subscriptions</td>
                 <td>
 <pre><code class="json">{
-    "domain_id": 13,
+    "domain_id": 1580,
     "status": "updated",
     "error": false,
     "msg": "Subscription updated"
