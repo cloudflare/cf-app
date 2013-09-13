@@ -113,7 +113,7 @@ var manifest_docs = {
     "user_fields": {
         title: "Expected user data",
         content: "User data that is expected when making the API call corresponding to an account creation - the first time a user tries to turn the app on " +
-                 " for any zone. Type: Array. Possible values: \"user_email\"",
+                 " for any zone. Type: Array. Possible values: \"email\"",
         required: false
     },
     "billing": {
@@ -123,7 +123,7 @@ var manifest_docs = {
     },
     "billing_type": {
         title: "Billing type",
-        content: "Currently apps can be billed per domain. Possible value for this is \"domain\"",
+        content: "Currently apps can be billed per domain. Possible value for this is \"zone\"",
         required: false
     },
     "plans": {
