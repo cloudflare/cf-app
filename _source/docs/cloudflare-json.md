@@ -48,7 +48,8 @@ title: cloudflare.json
                 "id": "food",
                 "name": "Favorite Food",
                 "description": "Please tell us your favorite food.",
-                <span class="key" id="domain_request">"domain_request"</span>: true
+                <span class="key" id="domain_request">"domain_request"</span>: true,
+                <span class="private" id="private">"private"</span>: true
             },
             {
                 "type": "select",
