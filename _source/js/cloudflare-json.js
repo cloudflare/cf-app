@@ -48,7 +48,7 @@ var manifest_docs = {
     "Price": {
         title: "App pricing info",
         content: "Describe your app's pricing information in general language, just say Free if there is no charge." +
-                 " Fill out the billing section if your plan to offer a paid version of your app",
+                 "Fill out the billing section if your plan to offer a paid version of your app",
         required: true
     },
     "Restrictions": {
@@ -74,19 +74,19 @@ var manifest_docs = {
     },
     "detail_page": {
         title: "Images used on the app detail page",
-        content: "You get an entire page on cloudflare.com to put marketing material for your app and to highlight it's features, images used on that page will go here",
+        content: "You get an entire page on cloudflare.com to put marketing material for your app and to highlight its features, images used on that page will go here",
         required: false
     },
     "has_js": {
         title: "Has JavaScript module",
         content: "Setting this to true will load a JavaScript module on all websites that enable this app." +
-                 "The module is expected to be available as part of the repo and follow the CloudFlare JS module sepc.",
+                 "The module is expected to be available as part of the repo and follow the CloudFlare JS module spec.",
     },
     "interface": {
         title: "Define the user interface",
         content: "You have some control over what the app can render in the dashboard and can prompt the user for input if required." +
                  "Two types of interface elements are allowed, input elements that allow users to type in and a select drop box with pre-defined options." +
-                 " All values will be availalbe as strings on the page",
+                 " All values will be available as strings on the page, unless private is included and set to true.",
         required: false
     },
     "interface_type": {
@@ -94,15 +94,18 @@ var manifest_docs = {
         content: "Type can be one of: \"input\" or \"select\"",
         required: true
     },
+    "private": {
+        title: "Should the interface element and its value be available in the source of the page when the app is enabled. Values are Boolean true or false. If OK in page source, can skip, or set to false."
+    }
     "domain_request": {
         title: "Send as part of domain request",
-        content: "Setting the value of this key to true will pass the value of data entereted by the user to the API endpoint as part of domain request." +
+        content: "Setting the value of this key to true will pass the value of data entered by the user to the API endpoint as part of domain request." +
                  " The key will be the \"id\" of the interface element",
         required: false
     },
     "account": {
         title: "User account section",
-        content: "Apps that need to talk back to a service endpoint when users take actions like turning the app on, making a payment etc need to use this section",
+        content: "Apps that need to talk back to a service endpoint when users take actions like turning the app on, making a payment, etc., need to use this section",
         required: false
     },
     "callback_url": {
@@ -138,7 +141,7 @@ var default_popover_options = {
     trigger: 'hover'
 };
 
-// wait for syntax highlighter to finish it's job, seem to mess with DOM manipulation
+// wait for syntax highlighter to finish its job, seem to mess with DOM manipulation
 setTimeout(function() {
     // iterate over list of key docs and attach popover elements
     for (var manifest_key in manifest_docs) {
