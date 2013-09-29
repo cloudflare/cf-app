@@ -4,11 +4,7 @@ title: cloudflare.json
 ---
 
 <div class="row">
-    <div class="span2">
-        
-    </div>
-    <div class="span8">
-        <h2>cloudflare.json</h2>
+    <div class="col-md-12">
         <p>Documentation for the manifest file that defines the app - cloudflare.json</p>
         <div class="alert alert-info">
             Mouse over the underlined attributes to see more information about it
@@ -90,8 +86,5 @@ title: cloudflare.json
 </code></pre>
 
         </div>
-    </div>
-    <div class="span2">
-        
     </div>
 </div>
