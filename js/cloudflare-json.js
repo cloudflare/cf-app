@@ -101,7 +101,7 @@ var manifest_docs = {
         required: false
     },
     "private": {
-        title: "Do not make this user input public"
+        title: "Do not make this user input public",
         content: "Should the interface element and its value be available for the app's JS to use when the app is enabled. Values are Boolean true or false." +
                  " By default, values input by the user will be placed in the source markup of the end user's site and will be available when you require 'app/config' in" +
                  " your app JS module. Set sensitive information that you only need during signup as private.",
