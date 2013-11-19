@@ -25,9 +25,9 @@ title: Single Sign-on
 
             <p>cf-timestamp is a UNIX timestamp which represents the last valid time at which this URL is still valid. When this timestamp is less than the current time then reject the user. The upper bound would be 5 mins from now.</p>
 
-            <p>URL is still valid when
+            <p>URL is valid when both the following conditions are true
                 <ul>
-                    <li>now &gt; cf-timestamp</li>
+                    <li>cf-timestamp &gt; now</li>
                     <li>cf-timestamp &lt; now + 300 seconds</li>
                 </ul>
             </p>
