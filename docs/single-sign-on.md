@@ -32,7 +32,7 @@ title: Single Sign-on
                 </ul>
             </p>
 
-            <p>The other parameter is the signature which is an HMAC generated from data in the URL along with the timestamp, signed using the app specific shared secret (available in the App Developer Dashboard (https://www.cloudfalre.com/app-signup) with sha256 as the algorithm.</p>
+            <p>The other parameter is the signature which is an HMAC generated from data in the URL along with the timestamp, signed using the app specific shared secret (available in the App Developer Dashboard (https://www.cloudflare.com/app-signup) with sha256 as the algorithm.</p>
 
             <p>The data that is used to generate the signature is the login URL that was returned during account creation, with any query params removed, concatenated with the cf-timestamp.</p>
 
